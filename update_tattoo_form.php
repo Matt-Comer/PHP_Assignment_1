@@ -30,7 +30,6 @@
 ?>
 <!-- Adds the header to the page -->
 <?php include('header.php'); ?>
-
 <main>
     <!-- Displays the update tattoo heading -->
     <h2>Update Tattoo</h2>
@@ -50,7 +49,6 @@
                 </option>
             <?php endforeach; ?>
         </select>
-
         <label for="tattooStyle">Tattoo Style:</label>
         <input
             type="text"
@@ -77,11 +75,37 @@
             value="<?php echo $tattoo['price']; ?>"
             required
         >
+        <!-- Displays the current image or hides the empty preview -->
+        <label for="imagePreview">Current Image:</label>
+        <img
+            id="imagePreview"
+            <?php if (!empty($tattoo['imageName'])) : ?>
+                src="<?php echo htmlspecialchars('images/' . $tattoo['imageName']); ?>"
+            <?php else : ?>
+                hidden
+            <?php endif; ?>
+            alt="Tattoo Image"
+            height="100"
+        >
+        <!-- Allows a replacement image to be selected -->
         <label for="file1">Tattoo Image:</label>
         <input type="file" name="file1" id="file1" accept="image/png, image/jpeg">
         <button type="submit">Update Tattoo</button>
     </form>
 </main>
-
+<script>
+    // Get the file input and image preview
+    const fileInput = document.getElementById("file1");
+    const imagePreview = document.getElementById("imagePreview");
+    // Preview the selected replacement image
+    fileInput.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file) {
+            const imageURL = URL.createObjectURL(file);
+            imagePreview.src = imageURL;
+            imagePreview.hidden = false;
+        }
+    });
+</script>
 <!-- Adds the footer to the page -->
 <?php include('footer.php'); ?>

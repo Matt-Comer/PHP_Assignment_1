@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <!-- Sets the character encoding for the page -->
     <meta charset="UTF-8">
     <!-- Sets the title shown in the browser tab -->
     <title>Tattoo Studio</title>
-    <!-- Links the CSS stylesheet to the page -->
-    <link rel="stylesheet" href="css/app.css">
+    <!-- Loads a fresh copy of the stylesheet -->
+    <link rel="stylesheet" href="css/app.css?v=4">
 </head>
 <body>
     <!-- Displays the main header for the application -->
     <header>
         <h1>Tattoo Studio</h1>
     </header>
-    

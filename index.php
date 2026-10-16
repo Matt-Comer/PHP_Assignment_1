@@ -1,4 +1,4 @@
-<?php 
+<?php
     // Connect to the database
     require_once('database.php');
     // Select tatoos with their related artist
@@ -12,7 +12,7 @@
               JOIN artists AS a
                   ON t.artistID = a.artistID
               ORDER BY t.tattooID';
-    // Prepare the query
+    // Prepare  the query
     $statement = $db->prepare($query);
     // Execute the query
     $statement->execute();
@@ -38,6 +38,7 @@
             <th>Price</th>
             <th>Delete</th>
             <th>Update</th>
+            <th>Details</th>
         </tr>
         <!-- Loops through each tattoo record -->
         <?php foreach ($tatoos as $tattoo) : ?>
@@ -78,6 +79,17 @@
                         value="<?php echo $tattoo['tattooID']; ?>"
                     >
                     <button type="submit">Update</button>
+                </form>
+            </td>
+            <td>
+                <!-- Opens the selected tattoo details -->
+                <form action="tattoo_details.php" method="post">
+                    <input
+                        type="hidden"
+                        name="tattooID"
+                        value="<?php echo $tattoo['tattooID']; ?>"
+                    >
+                    <button type="submit">Details</button>
                 </form>
             </td>
         </tr>

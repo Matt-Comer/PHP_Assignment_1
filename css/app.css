@@ -1,11 +1,12 @@
-/* Styles the main page*/
+/* Styles the main page and default text */
 body {
-width: 80%;
-margin: 30px auto;
-padding: 25px;
-background-color: #0b0f14;
-border: 2px solid #187bcd;
-border-radius: 12px;
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #0b0f14;
+    border: 2px solid #187bcd;
+    border-radius: 12px;
+    color: #4da6ff;
 }
 /* Styles the main content area */
 main {
@@ -15,45 +16,89 @@ main {
     background-color: #0b0f14;
     border: 2px solid #187bcd;
 }
-/* Styles the page header*/
+/* Styles the page header */
 header {
-  width: 80%;
-margin: 30px auto;
-padding: 20px 25px;
-background-color: #101820;
-border: 2px solid #187bcd;
-border-radius: 12px;
-text-align: center;
-} 
-/* Style4s the main title */
-h1 {
-  margin: 0;
-  color: #4da6ff;
-text-align: center;
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px 25px;
+    background-color: #101820;
+    border: 2px solid #187bcd;
+    border-radius: 12px;
+    text-align: center;
 }
-/* Styles the gallery title */
+/* Styles the main title */
+h1 {
+    margin: 0;
+    color: #4da6ff;
+    text-align: center;
+}
+/* Styles the page headings */
 h2 {
-color: #4da6ff;
+    color: #4da6ff;
+}
+/* Keeps links readable before and after visiting */
+a,
+a:visited {
+    color: #4da6ff;
+}
+/* Highlights links when the mouse is over them */
+a:hover {
+    color: #ffffff;
 }
 /* Styles the table headings */
 th {
-color: #4da6ff;
-padding: 10px;
-text-align: left;
+    color: #4da6ff;
+    padding: 10px;
+    text-align: left;
 }
-/* Styles the tattoo information */
+/* Styles the tattoo information  */
 td {
-color: #4da6ff;
-padding: 8px;
+    color: #4da6ff;
+    padding: 8px;
+}
+/* Places each add and update  label on its own line */
+#add_tattoo_form label,
+#update_tattoo_form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+/* Sizes the  visible form fields */
+#add_tattoo_form input[type="text"],
+#add_tattoo_form input[type="number"],
+#add_tattoo_form select,
+#update_tattoo_form input[type="text"],
+#update_tattoo_form input[type="number"],
+#update_tattoo_form select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+}
+/* Gives the file selection its own line */
+#add_tattoo_form input[type="file"],
+#update_tattoo_form input[type="file"] {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+/* Adds space around the form submit buttons */
+#add_tattoo_form button,
+#update_tattoo_form button {
+    margin-top: 10px;
+    padding: 8px 15px;
+}
+/* Keeps images within the content area */
+main img {
+    max-width: 100%;
 }
 /* Styles the page footer */
 footer {
-width: 80%;
-margin: 30px auto;
-padding: 15px 25px;
-background-color: #101820;
-border: 2px solid #187bcd;
-border-radius: 12px;
-color: #4da6ff;
-text-align: center;
+    width: 80%;
+    margin: 30px auto;
+    padding: 15px 25px;
+    background-color: #101820;
+    border: 2px solid #187bcd;
+    border-radius: 12px;
+    color: #4da6ff;
+    text-align: center;
 }
